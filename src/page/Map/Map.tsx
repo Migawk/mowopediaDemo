@@ -14,14 +14,14 @@ export function Map() {
   } | null>(null);
   useEffect(() => {
     document.addEventListener('click', (e) => {
-      const { target } = e as unknown as {target: HTMLElement};
+      const { target } = e as unknown as {target: HTMLElement & {parentNode: HTMLElement}};
 
       if(!target) return;
       if(target.nodeName === "svg") return setElement(null);
       if(target.nodeName !== "path" || target.id === "panel" || target.parentNode!.id === "panel") return;
       if(!target.id || target.id.match(/\d+/) !== null) return setElement(null);
 
-      const res = langs[target.id];
+      const res = (langs as any)[target.id];
       setElement({...res, description: markText(res.description)})
       // fetch("http://192.168.0.101:3000/language/"+target.id)
       //   .then(res => res.json())
