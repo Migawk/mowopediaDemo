@@ -6,7 +6,7 @@ export default function App() {
     <main className={styles.main}>
       <img src="/background.gif" className={styles.backgroundImg}/>
       <section className={styles.modal}>
-        <h1>Mowopedia</h1>
+        <h1>Mowopedia<sup style={{color: "#933"}}>DEMO</sup></h1>
         <p>A little project for showing and<br/>explaining languages in internet.</p>
         <div className={styles.modalBottom}>
           {/* <Link to="/wikia">Wikia</Link> */}
