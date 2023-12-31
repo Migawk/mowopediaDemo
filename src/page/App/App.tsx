@@ -9,7 +9,9 @@ export default function App() {
         <h1>Mowopedia</h1>
         <p>A little project for showing and<br/>explaining languages in internet.</p>
         <div className={styles.modalBottom}>
-          <Link to="/wikia">Wikia</Link>
+          {/* <Link to="/wikia">Wikia</Link> */}
+          <a href="https://github.com/Migawk/mowopedia">Github</a>
+          <a href="https://migawka.space">Author</a>
           <Link to="/map">Map</Link>
         </div>
       </section>
